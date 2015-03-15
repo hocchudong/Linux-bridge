@@ -26,6 +26,10 @@ Kiến trúc của Linux bridge như hình sau:
 *theo nguồn của NTT*
 <a name="tp"></a>
 ### 3. Các thành phần
+Trong kiến trúc trên có các thành phần:
+- Tap : có thể hiểu nó là một giao diên mạng để các máy ảo có thể giao tiếp được với bridge và nó nằm trong nhân kernel. Tap hoat động ở lớp 2 trong mô hình OSI
+- fd (forward data): dùng để chuyển tiếp data từ máy ảo
+
 <a name="cnsw"></a>
 ### 4. Chức năng của một switch ảo do Linux bridge tạo ra
 - STP: là tính năng chống loop gói tin trong switch
@@ -38,6 +42,8 @@ Kiến trúc của Linux bridge như hình sau:
 **Chuẩn bị**
 
 Một máy Ubuntu có cài KVM và có 2 card mạng là eth0 và eth1. Việc cài đặt KVM có thể làm theo hướng dẫn sau [đây](http://www.server-world.info/en/note?os=Ubuntu_14.04&p=kvm&f=1) hoặc chạy scrip **setup-kvm**
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/mxtaM58.png" alt="" id="screenshot-image">
 
 **Trường hợp 1**: Tạo ra một bridge và gán port eth1 cho bridge đó ( sử dụng câu lệnh `brctl` )
 
@@ -80,6 +86,10 @@ Dùng lệnh sau `brctl show` kết quả hiển thị như hình vẽ đồng n
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/FIGMjK7.png" alt="" id="screenshot-image">
 
+Khi hoàn thành xong việc cài đặt sơ đồ logic trong máy có thể như hình sau:
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/PlRbegR.png" alt="" id="screenshot-image">
+
 Để chắc chắn hơn bạn hay tạo một máy ảo và dùng card `hoainam` để khi khởi động máy ảo có nhận dải ip đúng với dải của card eth1 không. Nếu đúng thì việc tạo một bridge trong host thành công
 
 ** Trường hợp 2**: Gắn 2 port eth0 và eht1 vào trong cùng một bridge **hoainam**
@@ -106,6 +116,10 @@ Bước 3: Kiểm tra
 Dùng câu lệnh `brctl show` để kiểm tra nếu kết quả hiển thị như hình sau thì đồng nghĩa với việc đã cắm 2 card mạng vào một bridge thành công
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/9TxA1Wn.png" alt="" id="screenshot-image">
+
+Sơ đồ vật lý:
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/TB4P6CI.png" alt="" id="screenshot-image">
 
 - Thông tin thêm
 
