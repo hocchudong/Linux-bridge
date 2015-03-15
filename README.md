@@ -92,7 +92,7 @@ Khi hoàn thành xong việc cài đặt sơ đồ logic trong máy có thể nh
 
 Để chắc chắn hơn bạn hay tạo một máy ảo và dùng card `hoainam` để khi khởi động máy ảo có nhận dải ip đúng với dải của card eth1 không. Nếu đúng thì việc tạo một bridge trong host thành công
 
-** Trường hợp 2**: Gắn 2 port eth0 và eht1 vào trong cùng một bridge **hoainam**
+**Trường hợp 2**: Gắn 2 port eth0 và eht1 vào trong cùng một bridge **hoainam**
 
 - Các bước thực hiện
 
