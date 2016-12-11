@@ -41,7 +41,7 @@ Trong kiến trúc trên có các thành phần:
 
 **Chuẩn bị**
 
-Một máy Ubuntu có cài KVM và có 2 card mạng là eth0 và eth1. Việc cài đặt KVM có thể làm theo hướng dẫn sau [đây](http://www.server-world.info/en/note?os=Ubuntu_14.04&p=kvm&f=1) hoặc chạy scrip **setup-kvm**
+Một máy Ubuntu có cài KVM và có 2 card mạng là eth0 và eth1. Việc cài đặt KVM có thể làm theo hướng dẫn sau [đây](http://www.server-world.info/en/note?os=Ubuntu_14.04&p=kvm&f=1) hoặc chạy scrip [tại đây](https://raw.githubusercontent.com/hocchudong/KVM-QEMU/master/scripts/setup-kvm.sh) 
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/mxtaM58.png" alt="" id="screenshot-image">
 
